@@ -46,7 +46,7 @@ beforeEach(() => {
 	});
 
 	// prevent snap assets
-	cy.intercept(/.*snapui.searchspring.io\/.*.js$/, (req) => {
+	cy.intercept(/.*snapui.searchspring.io\/.*.js.*$/, (req) => {
 		req.destroy();
 	});
 });
