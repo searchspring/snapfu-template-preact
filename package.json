@@ -29,13 +29,13 @@
 			"all"
 		],
 		"tags": [],
-		"version": "0.57.0",
+		"version": "0.58.1",
 		"scaffold": "snapfu-scaffold-preact"
 	},
 	"prettier": "@searchspring/prettier",
 	"dependencies": {
-		"@searchspring/snap-preact": "0.57.0",
-		"@searchspring/snap-preact-components": "0.57.0",
+		"@searchspring/snap-preact": "0.58.1",
+		"@searchspring/snap-preact-components": "0.58.1",
 		"mobx": "6.9.0",
 		"mobx-react": "7.6.0",
 		"preact": "10.9.0"
@@ -50,7 +50,7 @@
 		"@babel/preset-env": "^7.21.4",
 		"@babel/preset-react": "^7.18.6",
 		"@babel/runtime": "^7.21.0",
-		"@lhci/cli": "^0.11.0",
+		"@lhci/cli": "^0.14.0",
 		"@searchspring/browserslist-config-snap": "^1.0.6",
 		"@searchspring/prettier": "^1.0.2",
 		"babel-loader": "^9.1.2",
