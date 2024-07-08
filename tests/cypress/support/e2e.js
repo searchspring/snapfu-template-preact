@@ -6,6 +6,8 @@
 // https://on.cypress.io/configuration
 // ***********************************************
 
+import 'cypress-fail-fast';
+
 // Import commands.js using ES2015 syntax:
 import './commands';
 import './custom';
