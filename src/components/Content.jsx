@@ -26,7 +26,7 @@ export const Content = observer((props) => {
 
 					{pagination.totalResults > 0 ? (
 						<div>
-							{isMobile && store.facets.length && store.pagination.totalResults && (
+							{isMobile && store.facets.length > 0 && store.pagination.totalResults > 0 && (
 								<Slideout buttonContent={<SlideoutButton />}>
 									<SlideoutContent />
 								</Slideout>

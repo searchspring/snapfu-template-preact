@@ -1,22 +1,24 @@
 import { h, Fragment } from 'preact';
 import { observer } from 'mobx-react';
-import { Price, InlineBanner, withController } from '@searchspring/snap-preact-components';
+import { Price, InlineBanner, withController, useMediaQuery, OverlayBadge, CalloutBadge, Image } from '@searchspring/snap-preact-components';
 
 export const Results = withController(
 	observer((props) => {
 		const controller = props.controller;
 		const { results } = controller.store;
 
+		const isMobile = useMediaQuery('(max-width: 767px)');
+
 		return (
-			<ul className="ss__results">
+			<div className="ss__results" style={{ display: 'grid', gap: '40px', gridTemplateColumns: `repeat(${isMobile ? 2 : 4}, 1fr)` }}>
 				{results.map((result) => (
-					<li className="ss__result" key={result.id}>
+					<div className="ss__result" key={result.id}>
 						{{
 							banner: <InlineBanner banner={result} />,
 						}[result.type] || <Result result={result} />}
-					</li>
+					</div>
 				))}
-			</ul>
+			</div>
 		);
 	})
 );
@@ -34,10 +36,25 @@ const Result = withController(
 			result && (
 				<div className="ss__result__wrapper">
 					<a href={core.url} onClick={intellisuggest}>
-						{core.name}
+						<OverlayBadge controller={controller} result={result}>
+							<Image src={core.imageUrl} />
+						</OverlayBadge>
 					</a>
 					<hr />
-					<Price value={core.price} />
+
+					<CalloutBadge result={result} />
+
+					<div>
+						<a href={core.url} onClick={intellisuggest}>
+							{core.name}
+						</a>
+					</div>
+
+					<div>
+						<Price value={core.price} />
+					</div>
+
+					<hr />
 				</div>
 			)
 		);
