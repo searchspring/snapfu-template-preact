@@ -29,13 +29,13 @@
 			"all"
 		],
 		"tags": [],
-		"version": "0.60.4",
+		"version": "0.61.0",
 		"scaffold": "snapfu-scaffold-preact"
 	},
 	"prettier": "@searchspring/prettier",
 	"dependencies": {
-		"@searchspring/snap-preact": "0.60.4",
-		"@searchspring/snap-preact-components": "0.60.4",
+		"@searchspring/snap-preact": "0.61.0",
+		"@searchspring/snap-preact-components": "0.61.0",
 		"mobx": "6.9.0",
 		"mobx-react": "7.6.0",
 		"preact": "10.9.0"
@@ -63,7 +63,7 @@
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.0",
 		"prettier": "^2.8.7",
-		"sass": "^1.60.0",
+		"sass": "1.78.0",
 		"sass-loader": "^13.2.2",
 		"style-loader": "^3.3.2",
 		"webpack": "^5.77.0",
